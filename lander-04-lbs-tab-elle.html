@@ -653,11 +653,6 @@
   if(!ok && host !== ''){
     document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:#999;font-size:14px;">Unauthorized use.</div>';
   }
-  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
-  document.addEventListener('keydown', function(e){
-    if((e.ctrlKey||e.metaKey) && ['u','s','a'].includes(e.key.toLowerCase())) e.preventDefault();
-    if(e.key === 'F12') e.preventDefault();
-  });
 })();
 </script>
 </body>
