@@ -233,7 +233,7 @@
       .adv-sale-banner .adv-sale-sub { display: none !important; }
       .adv-countdown-row { display: none !important; }
       /* ── Single-button sticky bar on mobile ── */
-      .adv-sticky-cta { display: block !important; background: #2d6b63 !important; border-top: none !important; }
+      .adv-sticky-cta { background: #2d6b63 !important; border-top: none !important; }
       .adv-sticky-headline { display: none !important; }
       .adv-sticky-sub { display: none !important; }
       .adv-sticky-inner { padding: 0 !important; }
@@ -655,6 +655,21 @@
     else if(countEl) countEl.textContent = '00:00';
   }
   tick();
+
+  // ── STICKY BAR: show after 50% scroll, then stay ──
+  var stickyBar = document.querySelector('.adv-sticky-cta');
+  var stickyShown = false;
+  if(stickyBar){
+    window.addEventListener('scroll', function(){
+      if(stickyShown) return;
+      var scrolled = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if(docHeight > 0 && scrolled / docHeight >= 0.5){
+        stickyShown = true;
+        stickyBar.style.display = 'block';
+      }
+    }, { passive: true });
+  }
 
   // ── ANTI-RIP ──
   var allowed = ['localhost','127.0.0.1','sculpiflex.com','gecko-ai.github.io'];
