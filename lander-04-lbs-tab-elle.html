@@ -32,9 +32,25 @@
     }
 
     /* ── SALE BANNER ── */
-    .adv-sale-banner { background: #f8dcdc !important; padding: 6px 16px !important; text-align: center !important; }
-    .adv-sale-banner .adv-sale-title { font-weight: 800 !important; font-style: italic !important; letter-spacing: 0.04em !important; color: #c8102e !important; font-size: 16px !important; margin: 0 !important; }
-    .adv-sale-banner .adv-sale-sub { font-size: 12px !important; font-weight: 600 !important; color: #111 !important; margin: 0 !important; }
+    .adv-sale-banner { background: #c8102e !important; padding: 10px 16px !important; text-align: center !important; }
+    .adv-sale-banner .adv-sale-title { font-weight: 800 !important; font-style: italic !important; letter-spacing: 0.04em !important; color: #fff !important; font-size: 18px !important; margin: 0 !important; }
+    .adv-sale-banner .adv-sale-sub { font-size: 13px !important; font-weight: 600 !important; color: rgba(255,255,255,0.9) !important; margin: 2px 0 0 !important; }
+    .adv-countdown-row { display: flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; margin-top: 6px !important; }
+    .adv-countdown-label { font-size: 12px !important; font-weight: 600 !important; color: rgba(255,255,255,0.85) !important; }
+    .adv-countdown { font-size: 20px !important; font-weight: 900 !important; color: #fff !important; letter-spacing: 0.08em !important; font-variant-numeric: tabular-nums !important; }
+    /* ── STOCK WARNING ── */
+    .adv-stock-warn { background: #fff8e1 !important; border: 1px solid #f9c74f !important; border-left: 4px solid #f9c74f !important; border-radius: 6px !important; padding: 12px 16px !important; margin-top: 16px !important; display: flex !important; align-items: flex-start !important; gap: 10px !important; }
+    .adv-stock-warn-icon { font-size: 20px !important; flex-shrink: 0 !important; line-height: 1.4 !important; }
+    .adv-stock-warn-text { font-size: 14px !important; font-weight: 600 !important; color: #7d5a00 !important; line-height: 1.5 !important; margin: 0 !important; }
+    .adv-stock-bar-wrap { margin-top: 6px !important; }
+    .adv-stock-bar-bg { background: #e0e0e0 !important; border-radius: 999px !important; height: 8px !important; width: 100% !important; overflow: hidden !important; }
+    .adv-stock-bar-fill { background: linear-gradient(90deg,#f9c74f,#f3722c) !important; height: 100% !important; border-radius: 999px !important; width: 23% !important; }
+    /* ── ACT NOW CHECKLIST ── */
+    .adv-act-now { margin-top: 20px !important; }
+    .adv-act-now-title { font-size: 16px !important; font-weight: 800 !important; text-transform: uppercase !important; letter-spacing: 0.04em !important; color: #2d6b63 !important; margin: 0 !important; }
+    .adv-act-now ul { list-style: none !important; padding: 0 !important; margin: 8px 0 0 !important; }
+    .adv-act-now ul li { font-size: 15px !important; font-weight: 600 !important; color: #111 !important; padding: 4px 0 !important; display: flex !important; align-items: center !important; gap: 8px !important; }
+    .adv-act-now ul li::before { content: '✅' !important; flex-shrink: 0 !important; }
 
     /* ── CONTAINER & LAYOUT ── */
     .adv-container { max-width: 1080px !important; margin: 0 auto !important; padding: 8px 24px 32px !important; }
@@ -184,8 +200,11 @@
     .adv-foot strong { color: #e5e5e5 !important; }
 
     /* ── STICKY CTA ── */
-    .adv-sticky-cta { position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; z-index: 9999 !important; background: #d6ede8 !important; border-top: 1px solid rgba(45,107,99,0.2) !important; padding: 12px !important; box-shadow: 0 -4px 12px rgba(0,0,0,0.12) !important; display: none !important; }
-    .adv-sticky-cta a.adv-cta-btn { margin-top: 0 !important; padding: 14px !important; }
+    .adv-sticky-cta { position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; z-index: 9999 !important; background: #c8102e !important; border-top: 3px solid #a00c24 !important; padding: 0 !important; box-shadow: 0 -4px 16px rgba(0,0,0,0.25) !important; display: none !important; }
+    .adv-sticky-inner { padding: 10px 16px !important; display: flex !important; flex-direction: column !important; align-items: center !important; gap: 4px !important; }
+    .adv-sticky-headline { font-size: 16px !important; font-weight: 800 !important; color: #fff !important; margin: 0 !important; letter-spacing: 0.02em !important; text-align: center !important; }
+    .adv-sticky-sub { font-size: 12px !important; color: rgba(255,255,255,0.85) !important; margin: 0 !important; text-align: center !important; }
+    .adv-sticky-cta a.adv-cta-btn { margin-top: 6px !important; padding: 12px 24px !important; background: #fff !important; color: #c8102e !important; font-size: 16px !important; border-radius: 6px !important; }
 
     /* ── TABLET ── */
     @media (max-width: 1023px) {
@@ -220,8 +239,12 @@
   <div class="adv-advertorial-label">Advertorial</div>
 
   <div class="adv-sale-banner">
-    <p class="adv-sale-title">✨ SUMMER SALE ✨</p>
-    <p class="adv-sale-sub">Get Your Gifts Now! 60% OFF + FREE Shipping</p>
+    <p class="adv-sale-title">☀ SUMMER SALE — 60% OFF + FREE Shipping</p>
+    <p class="adv-sale-sub">⚠️ Only 23% of inventory remaining at this price. Not available on Amazon or eBay.</p>
+    <div class="adv-countdown-row">
+      <span class="adv-countdown-label">⏰ This offer expires in:</span>
+      <span class="adv-countdown" id="advCountdown">30:00</span>
+    </div>
   </div>
 
   <div class="adv-container">
@@ -237,6 +260,17 @@
 
         <!-- Hero image v2 -->
         <img class="adv-hero-img" src="https://sculpiflex.com/wp-content/uploads/2025/12/Sculpiflex-advertorial-BA-2-3.jpg" alt="Sculpiflex before and after results">
+
+        <!-- ── STOCK WARNING ── -->
+        <div class="adv-stock-warn">
+          <span class="adv-stock-warn-icon">⚠️</span>
+          <div>
+            <p class="adv-stock-warn-text">🔴 <strong>LOW STOCK WARNING:</strong> Due to high demand, Sculpiflex is almost sold out. Only 23% of inventory remains at the current discount price. <strong>Not available on Amazon or eBay.</strong></p>
+            <div class="adv-stock-bar-wrap">
+              <div class="adv-stock-bar-bg"><div class="adv-stock-bar-fill"></div></div>
+            </div>
+          </div>
+        </div>
 
         <!-- ── ELLE CANADA AS SEEN IN STRIP ── -->
         <div class="adv-elle-strip">
@@ -552,7 +586,17 @@
         <div class="adv-side-img-box">
           <img src="https://sculpiflex.com/wp-content/uploads/2026/04/hf_20260429_092524_9afb7d50-98e1-4aa4-9d2e-0874919bd1ce.jpg" alt="Sculpiflex device" loading="lazy">
         </div>
-        <a class="adv-side-btn" href="https://sculpiflex.com/?wffn-next-link=yes">CHECK AVAILABILITY</a>
+        <div class="adv-act-now">
+          <p class="adv-act-now-title">Act Now and You'll Get:</p>
+          <ul>
+            <li>60% OFF — Summer Sale Price</li>
+            <li>FREE Shipping from US Warehouse</li>
+            <li>30-Day Money-Back Guarantee</li>
+            <li>Full Kit + Clinic-Grade Gel Included</li>
+          </ul>
+        </div>
+        <a class="adv-side-btn" href="https://sculpiflex.com/?wffn-next-link=yes" style="margin-top:12px !important;">⚡ CLAIM MY DISCOUNT</a>
+        <p style="text-align:center;font-size:11px;color:#c8102e;font-weight:700;margin-top:8px;">⏰ Sale Ends Today — <span id="advSideDate"></span></p>
       </div>
 
     </div><!-- /adv-layout -->
@@ -568,24 +612,41 @@
 
   <!-- Sticky mobile CTA -->
   <div class="adv-sticky-cta">
-    <a class="adv-cta-btn" href="https://sculpiflex.com/?wffn-next-link=yes">CHECK AVAILABILITY <span aria-hidden="true">→</span></a>
+    <div class="adv-sticky-inner">
+      <p class="adv-sticky-headline">⚡ SUMMER SALE — 60% OFF ENDS TODAY</p>
+      <p class="adv-sticky-sub">Sale Ends: <span id="advStickyDate"></span> at 23:59 · Only 23% of stock remaining</p>
+      <a class="adv-cta-btn" href="https://sculpiflex.com/?wffn-next-link=yes">CLAIM MY DISCOUNT →</a>
+    </div>
   </div>
 
 </div><!-- /adv-sculpiflex-wrapper -->
 
 <script>
 (function(){
-  // Logos scroll buttons
-  var track = document.getElementById('advLogosTrack');
-  if(track){
-    document.querySelectorAll('.adv-scroll-btn').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        var dir = parseInt(btn.getAttribute('data-dir'), 10) || 1;
-        track.scrollBy({ left: dir * 200, behavior: 'smooth' });
-      });
-    });
+  // ── LIVE DATE ──
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var now = new Date();
+  var dateStr = months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+  ['advSideDate','advStickyDate'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.textContent = dateStr;
+  });
+
+  // ── 30-MIN COUNTDOWN ──
+  var DURATION = 30 * 60 * 1000;
+  var endTime = Date.now() + DURATION;
+  var countEl = document.getElementById('advCountdown');
+  function tick(){
+    var remaining = Math.max(0, endTime - Date.now());
+    var m = Math.floor(remaining / 60000);
+    var s = Math.floor((remaining % 60000) / 1000);
+    if(countEl) countEl.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    if(remaining > 0) setTimeout(tick, 1000);
+    else if(countEl) countEl.textContent = '00:00';
   }
-  // Anti-rip
+  tick();
+
+  // ── ANTI-RIP ──
   var allowed = ['localhost','127.0.0.1','sculpiflex.com','gecko-ai.github.io'];
   var host = window.location.hostname;
   var ok = allowed.some(function(d){ return host === d || host.endsWith('.'+d); });
