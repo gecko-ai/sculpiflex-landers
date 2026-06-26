@@ -19,6 +19,8 @@ body {
   line-height: 1.7;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 img {
@@ -523,7 +525,78 @@ a {
   text-decoration: underline;
 }
 
-/* ── RESPONSIVE ── */
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 767px) {
+  body { font-size: 15px; }
+
+  .content { padding: 0 14px; }
+
+  .announcement-bar { font-size: 12px; padding: 8px 12px; }
+
+  .wordmark { font-size: 22px; letter-spacing: 2px; }
+
+  .author-section { gap: 10px; padding: 16px 0 8px; }
+  .author-photo { width: 44px; height: 44px; }
+  .author-info { font-size: 13px; }
+  .author-info strong { font-size: 14px; }
+
+  .opening-hook { font-size: 17px; padding: 16px 0 20px; margin-bottom: 20px; }
+
+  .hero-image { margin: 0 -14px 24px; }
+
+  .body-section h4 { font-size: 18px; }
+  .body-section h3 { font-size: 19px; }
+  .body-section h2 { font-size: 20px; }
+  .body-section p { font-size: 15px; }
+
+  .mistake-card { padding: 16px 14px; }
+  .mistake-card h5 { font-size: 15px; }
+  .mistake-card p { font-size: 14px; }
+
+  .cta-block { padding: 22px 14px; margin: 28px 0; }
+  .cta-button { font-size: 15px; padding: 14px 28px; width: 100%; display: block; text-align: center; }
+
+  .section-image { margin: 16px 0; }
+
+  .benefit-item { gap: 10px; margin-bottom: 14px; }
+  .benefit-item p { font-size: 14px; }
+
+  .testimonial-body { padding: 16px; }
+  .testimonial-body h5 { font-size: 15px; }
+  .testimonial-body blockquote { font-size: 14px; }
+
+  .small-review { gap: 12px; padding: 12px; }
+  .small-review img { width: 72px; height: 72px; }
+  .small-review-body p { font-size: 13px; }
+
+  .amazon-warning { padding: 18px 14px; }
+  .amazon-warning ul li { font-size: 14px; }
+
+  .bottom-line-box { padding: 18px 16px; }
+
+  .support-channels { padding: 16px 14px; }
+  .support-channels p { font-size: 14px; }
+
+  .sticky-bar a { font-size: 14px; padding: 12px 24px; }
+
+  .site-footer { padding: 24px 14px 90px; }
+  .footer-disclaimer { font-size: 11px; }
+  .footer-links { gap: 14px; }
+  .footer-links a { font-size: 12px; }
+
+  .check-list-item { font-size: 14px; }
+
+  .stock-warning { font-size: 13px; }
+}
+
+@media (max-width: 400px) {
+  .opening-hook { font-size: 16px; }
+  .body-section h2 { font-size: 18px; }
+  .body-section h3 { font-size: 17px; }
+  .cta-button { font-size: 14px; padding: 13px 20px; }
+}
+
+/* ── DESKTOP RESPONSIVE ── */
 @media (min-width: 768px) {
   body {
     font-size: 18px;
