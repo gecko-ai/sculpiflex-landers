@@ -1364,30 +1364,7 @@
     });
 </script>
 
-<!-- ANTI-RIP PROTECTION -->
-<style>
-  body {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-</style>
-<script>
-(function(){
-  var allowed = ['localhost', '127.0.0.1', 'gecko-ai.github.io', 'sculpiflex.com'];
-  var host = window.location.hostname;
-  if (host && allowed.indexOf(host) === -1) {
-    document.documentElement.innerHTML = '<div style="text-align:center;margin-top:50px;font-family:sans-serif;"><h1>Unauthorized Use</h1><p>This page is protected and may only be hosted on authorized domains.</p></div>';
-  }
-  document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || (e.ctrlKey && e.key === 'U') || (e.metaKey && e.altKey && (e.key === 'I' || e.key === 'J' || e.key === 'U'))) {
-      e.preventDefault(); return false;
-    }
-  });
-  document.addEventListener('dragstart', function(e) { e.preventDefault(); });
-})();
-</script>
+
+
 </body>
 </html>
