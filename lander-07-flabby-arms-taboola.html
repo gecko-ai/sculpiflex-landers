@@ -11,7 +11,7 @@
     <style>
         /* ===== RESET & BASE ===== */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; width: 100%; }
         body {
             font-family: 'Montserrat', sans-serif;
             font-size: 17px;
@@ -20,6 +20,8 @@
             background: #f5f5f5;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            width: 100%;
         }
         img { max-width: 100%; height: auto; display: block; }
         a { color: inherit; text-decoration: none; }
@@ -825,37 +827,70 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            body { font-size: 16px; }
-            .hero-layout { flex-direction: column; padding: 20px 16px 10px; }
+            body { font-size: 15px; }
+            .hero-layout { flex-direction: column; padding: 20px 14px 10px; }
             .hero-sidebar { display: none; }
-            .hero-headline { font-size: 26px; }
-            .hero-subheadline { font-size: 16px; }
-            .red-subtitle { font-size: 14px; }
-            .section-header { font-size: 22px; }
-            .myth-header { font-size: 19px; }
-            .myth-box { padding: 22px 18px; }
-            .content-area { padding: 0 16px; }
-            .tech-item { flex-direction: column; align-items: center; text-align: center; }
+            .hero-headline { font-size: 24px; }
+            .hero-subheadline { font-size: 15px; }
+            .red-subtitle { font-size: 13px; }
+            .section-header { font-size: 20px; padding: 0 6px; }
+            .myth-header { font-size: 18px; }
+            .myth-box { padding: 18px 14px; margin: 12px 0; }
+            .myth-box p { font-size: 15px; }
+            .myth-box .bold-red { font-size: 16px; }
+            .myth-analogy { padding: 10px 14px; font-size: 14px; }
+            .content-area { padding: 0 14px; }
+            .body-copy p { font-size: 15px; line-height: 1.7; }
+            .tech-item { flex-direction: column; align-items: center; text-align: center; padding: 16px 14px; gap: 12px; }
+            .tech-icon { width: 50px; height: 50px; font-size: 22px; }
+            .tech-title { font-size: 16px; }
+            .tech-desc { font-size: 14px; }
             .review-card { flex-direction: column; }
-            .review-card-image { width: 100%; height: 220px; }
-            .steps-grid { grid-template-columns: 1fr; gap: 16px; }
+            .review-card-image { width: 100%; height: 240px; object-fit: cover; }
+            .review-card-body { padding: 18px 16px; }
+            .review-title { font-size: 16px; }
+            .review-text { font-size: 14px; }
+            .steps-grid { grid-template-columns: 1fr; gap: 14px; }
+            .step-card { padding: 20px 14px; }
             .doctor-highlight { flex-direction: column; align-items: center; text-align: center; }
+            .doctor-intro-top { padding: 14px 16px; gap: 10px; }
+            .doctor-intro-body { padding: 16px; font-size: 14px; }
+            .as-seen-strip { padding: 12px 16px; gap: 10px; }
             .publication-name { font-size: 18px; letter-spacing: 2px; }
             .promo-banner { font-size: 13px; padding: 10px 12px; }
             .ba-grid { grid-template-columns: 1fr; }
-            .final-cta-box { padding: 28px 20px; }
-            .warning-section { padding: 22px 18px; }
+            .final-cta-box { padding: 24px 16px; }
+            .final-cta-box img { max-width: 220px; }
+            .warning-section { padding: 20px 16px; }
+            .warning-section h3 { font-size: 18px; }
+            .product-card-blue { padding: 22px 16px; margin: 20px 0; }
+            .product-card-blue img { max-width: 240px; }
+            .video-wrapper { max-width: 100%; margin: 16px auto; }
+            .comparison-img { margin: 14px 0; }
+            .support-section { padding: 18px 14px; }
+            .support-section h3 { font-size: 16px; }
+            .stock-warning { padding: 14px 16px; font-size: 14px; }
+            .cta-btn { font-size: 15px; padding: 14px 24px; width: 100%; display: block; }
+            .cta-center { margin: 20px 0; }
+            .sticky-cta { padding: 10px 14px; }
+            .sticky-cta .cta-btn { font-size: 14px; padding: 12px 20px; }
+            .timeline { padding-left: 24px; }
+            .timeline-label { font-size: 15px; }
+            .timeline-desc { font-size: 14px; }
+            .site-footer { padding: 28px 16px; }
+            .footer-links { gap: 12px; }
+            .references-section { padding: 24px 14px; }
         }
-        @media (max-width: 576px) {
-            .hero-headline { font-size: 23px; }
-            .hero-subheadline { font-size: 15px; }
-            .section-header { font-size: 20px; }
-            .myth-header { font-size: 17px; }
-            .body-copy p { font-size: 16px; }
-            .cta-btn { font-size: 15px; padding: 14px 28px; }
-            .review-card-body { padding: 16px; }
-            .as-seen-logos { gap: 16px; }
-            .as-seen-logo { font-size: 13px; }
+
+        @media (max-width: 400px) {
+            .hero-headline { font-size: 21px; }
+            .hero-subheadline { font-size: 14px; }
+            .section-header { font-size: 18px; }
+            .myth-header { font-size: 16px; }
+            .body-copy p { font-size: 14px; }
+            .review-card-image { height: 200px; }
+            .cta-btn { font-size: 14px; padding: 13px 18px; }
+            .final-cta-box img { max-width: 180px; }
         }
     </style>
 </head>
