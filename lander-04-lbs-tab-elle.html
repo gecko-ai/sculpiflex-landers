@@ -653,7 +653,7 @@
   var endTime = Date.now() + DURATION;
   var countEl = document.getElementById('advCountdown');
   function tick(){
-    var remaining = Math.max(0, endTime, Date.now());
+    var remaining = Math.max(0, endTime - Date.now());
     var m = Math.floor(remaining / 60000);
     var s = Math.floor((remaining % 60000) / 1000);
     if(countEl) countEl.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
@@ -669,7 +669,7 @@
     window.addEventListener('scroll', function(){
       if(stickyShown) return;
       var scrolled = window.scrollY;
-      var docHeight = document.documentElement.scrollHeight, window.innerHeight;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
       if(docHeight > 0 && scrolled / docHeight >= 0.5){
         stickyShown = true;
         stickyBar.classList.add('is-visible');

@@ -1270,7 +1270,7 @@
             }
 
             function goTo(index) {
-                var maxScroll = track.scrollWidth, track.parentElement.offsetWidth;
+                var maxScroll = track.scrollWidth - track.parentElement.offsetWidth;
                 var shift = getShift() * index;
                 if (shift > maxScroll) shift = maxScroll;
                 currentIndex = index;
