@@ -21,6 +21,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             width: 100%;
+            overflow-x: hidden;
         }
         img { max-width: 100%; height: auto; display: block; }
         a { color: inherit; text-decoration: none; }
@@ -68,8 +69,6 @@
         .page-wrapper {
             max-width: 1100px;
             margin: 0 auto;
-            align-items: flex-start;
-            overflow: visible;
             background: #fff;
         }
         .content-area {
@@ -82,9 +81,8 @@
             max-width: 1100px;
             margin: 0 auto;
             align-items: flex-start;
-            overflow: visible;
         }
-        .hero-main { flex: 1; min-width: 0; overflow: hidden; }
+        .hero-main { flex: 1; min-width: 0; max-width: 100%; overflow: hidden; }
         .hero-sidebar {
             width: 280px;
             flex-shrink: 0;
@@ -838,8 +836,10 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             body { font-size: 16px; }
-            .hero-layout { flex-direction: column; padding: 20px 18px 10px; overflow-x: hidden; max-width: 100vw; }
+            .hero-layout { flex-direction: column; padding: 20px 18px 10px; }
             .hero-image { max-width: 100%; width: 100%; height: auto; }
+            .hero-main { max-width: 100%; width: 100%; overflow: hidden; }
+            .content-area { padding: 0; max-width: 100%; width: 100%; }
             .hero-sidebar { display: none; }
             .hero-headline { font-size: 24px; }
             .hero-subheadline { font-size: 16px; }
