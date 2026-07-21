@@ -479,6 +479,26 @@
       }
       .adv-sticky-spacer { display: block; height: 120px; }
     }
+  
+/* ── TP Image Carousel ── */
+.tpic{width:100%;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;background:#fff;margin-bottom:14px;font-family:'Inter',-apple-system,sans-serif;}
+.tpic-head{display:flex;align-items:center;justify-content:space-between;padding:7px 12px;background:#fafafa;border-bottom:1px solid #e5e7eb;flex-wrap:wrap;gap:4px;}
+.tpic-brand{display:flex;align-items:center;gap:5px;font-weight:700;font-size:13px;color:#191919;text-decoration:none;}
+.tpic-score{font-size:12px;color:#4b5563;display:flex;align-items:center;gap:5px;}
+.tpic-score strong{color:#00b67a;}
+.tpic-tstars{color:#00b67a;letter-spacing:1px;font-size:13px;}
+.tpic-slides{position:relative;overflow:hidden;}
+.tpic-slide{display:none;}
+.tpic-slide.tpic-on{display:block;}
+.tpic-slide img{width:100%;height:auto;display:block;}
+.tpic-nav{display:flex;align-items:center;justify-content:space-between;padding:6px 10px;border-top:1px solid #f0f0f0;}
+.tpic-btn{width:26px;height:26px;border-radius:50%;border:1px solid #d1d5db;background:#fff;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center;color:#374151;padding:0;}
+.tpic-btn:hover{background:#f3f4f6;}
+.tpic-dots{display:flex;gap:5px;align-items:center;}
+.tpic-dot{width:6px;height:6px;border-radius:50%;background:#d1d5db;border:none;padding:0;cursor:pointer;transition:background .2s;}
+.tpic-dot.tpic-dot-on{background:#00b67a;}
+/* ── end tpic ── */
+
   </style>
 </head>
 <body>
@@ -515,31 +535,31 @@
   <!-- HERO CTA -->
   <div class="adv-cta-wrap">
 <!-- Trustpilot Carousel -->
-    <div class="tp2-widget" data-tpw="1">
-  <div class="tp2-head">
-    <a class="tp2-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg>
-      <span>Trustpilot</span>
+    <div class="tpic">
+  <div class="tpic-head">
+    <a class="tpic-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg><span>Trustpilot</span>
     </a>
-    <span class="tp2-score">
-      <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-      <span class="tp2-score-text"><strong>4.7</strong> Excellent &middot; <span class="tp2-count">861 reviews</span></span>
+    <span class="tpic-score">
+      <span class="tpic-tstars">★★★★★</span>
+      <strong>4.7</strong> Excellent &middot; <span>861 reviews</span>
     </span>
   </div>
-  <div class="tp2-track-wrap">
-    <div class="tp2-track">
-<div class="tp2-card">
-  <div class="tp2-card-inner">
-    <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-    <div class="tp2-title">Arrived quickly, works brilliantly</div>
-    <p class="tp2-text">Was hesitant about international shipping but my parcel arrived in under a week. Results on my arms after 3 weeks are remarkable — so much smoother.</p>
-    <div class="tp2-author">
-      <span class="tp2-avatar" style="background:#0891b2">MT</span>
-      <span>
-        <strong class="tp2-name">Margaret T.</strong>
-        <span class="tp2-meta"> · 21 Jul 2025</span>
-      </span>
+  <div class="tpic-slides">
+  <div class="tpic-slide tpic-on"><img src="images/reviews/review-1.png" alt="Michele, AU — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-2.png" alt="Vivian B, US — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-3.png" alt="Jacqueline Veazey, GB — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-4.png" alt="Brendilee Buhtz DeSoto, US — 4★ Trustpilot review" loading="lazy"></div>
+  </div>
+  <div class="tpic-nav">
+    <button class="tpic-btn tpic-prev" aria-label="Previous">&#8249;</button>
+    <div class="tpic-dots">
+  <button class="tpic-dot tpic-dot-on" aria-label="Review 1"></button>
+  <button class="tpic-dot" aria-label="Review 2"></button>
+  <button class="tpic-dot" aria-label="Review 3"></button>
+  <button class="tpic-dot" aria-label="Review 4"></button>
     </div>
+    <button class="tpic-btn tpic-next" aria-label="Next">&#8250;</button>
   </div>
 </div>
 <div class="tp2-card">
@@ -642,31 +662,31 @@
         </figure>
         <div class="adv-cta-wrap">
 <!-- Trustpilot Carousel -->
-    <div class="tp2-widget" data-tpw="2">
-  <div class="tp2-head">
-    <a class="tp2-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg>
-      <span>Trustpilot</span>
+    <div class="tpic">
+  <div class="tpic-head">
+    <a class="tpic-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg><span>Trustpilot</span>
     </a>
-    <span class="tp2-score">
-      <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-      <span class="tp2-score-text"><strong>4.7</strong> Excellent &middot; <span class="tp2-count">861 reviews</span></span>
+    <span class="tpic-score">
+      <span class="tpic-tstars">★★★★★</span>
+      <strong>4.7</strong> Excellent &middot; <span>861 reviews</span>
     </span>
   </div>
-  <div class="tp2-track-wrap">
-    <div class="tp2-track">
-<div class="tp2-card">
-  <div class="tp2-card-inner">
-    <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-    <div class="tp2-title">Arrived quickly, works brilliantly</div>
-    <p class="tp2-text">Was hesitant about international shipping but my parcel arrived in under a week. Results on my arms after 3 weeks are remarkable — so much smoother.</p>
-    <div class="tp2-author">
-      <span class="tp2-avatar" style="background:#0891b2">MT</span>
-      <span>
-        <strong class="tp2-name">Margaret T.</strong>
-        <span class="tp2-meta"> · 21 Jul 2025</span>
-      </span>
+  <div class="tpic-slides">
+  <div class="tpic-slide tpic-on"><img src="images/reviews/review-1.png" alt="Michele, AU — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-2.png" alt="Vivian B, US — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-3.png" alt="Jacqueline Veazey, GB — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-4.png" alt="Brendilee Buhtz DeSoto, US — 4★ Trustpilot review" loading="lazy"></div>
+  </div>
+  <div class="tpic-nav">
+    <button class="tpic-btn tpic-prev" aria-label="Previous">&#8249;</button>
+    <div class="tpic-dots">
+  <button class="tpic-dot tpic-dot-on" aria-label="Review 1"></button>
+  <button class="tpic-dot" aria-label="Review 2"></button>
+  <button class="tpic-dot" aria-label="Review 3"></button>
+  <button class="tpic-dot" aria-label="Review 4"></button>
     </div>
+    <button class="tpic-btn tpic-next" aria-label="Next">&#8250;</button>
   </div>
 </div>
 <div class="tp2-card">
@@ -817,31 +837,31 @@
   <!-- POST-TABLE CTA -->
   <div class="adv-cta-wrap">
 <!-- Trustpilot Carousel -->
-    <div class="tp2-widget" data-tpw="3">
-  <div class="tp2-head">
-    <a class="tp2-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg>
-      <span>Trustpilot</span>
+    <div class="tpic">
+  <div class="tpic-head">
+    <a class="tpic-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg><span>Trustpilot</span>
     </a>
-    <span class="tp2-score">
-      <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-      <span class="tp2-score-text"><strong>4.7</strong> Excellent &middot; <span class="tp2-count">861 reviews</span></span>
+    <span class="tpic-score">
+      <span class="tpic-tstars">★★★★★</span>
+      <strong>4.7</strong> Excellent &middot; <span>861 reviews</span>
     </span>
   </div>
-  <div class="tp2-track-wrap">
-    <div class="tp2-track">
-<div class="tp2-card">
-  <div class="tp2-card-inner">
-    <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-    <div class="tp2-title">Arrived quickly, works brilliantly</div>
-    <p class="tp2-text">Was hesitant about international shipping but my parcel arrived in under a week. Results on my arms after 3 weeks are remarkable — so much smoother.</p>
-    <div class="tp2-author">
-      <span class="tp2-avatar" style="background:#0891b2">MT</span>
-      <span>
-        <strong class="tp2-name">Margaret T.</strong>
-        <span class="tp2-meta"> · 21 Jul 2025</span>
-      </span>
+  <div class="tpic-slides">
+  <div class="tpic-slide tpic-on"><img src="images/reviews/review-1.png" alt="Michele, AU — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-2.png" alt="Vivian B, US — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-3.png" alt="Jacqueline Veazey, GB — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-4.png" alt="Brendilee Buhtz DeSoto, US — 4★ Trustpilot review" loading="lazy"></div>
+  </div>
+  <div class="tpic-nav">
+    <button class="tpic-btn tpic-prev" aria-label="Previous">&#8249;</button>
+    <div class="tpic-dots">
+  <button class="tpic-dot tpic-dot-on" aria-label="Review 1"></button>
+  <button class="tpic-dot" aria-label="Review 2"></button>
+  <button class="tpic-dot" aria-label="Review 3"></button>
+  <button class="tpic-dot" aria-label="Review 4"></button>
     </div>
+    <button class="tpic-btn tpic-next" aria-label="Next">&#8250;</button>
   </div>
 </div>
 <div class="tp2-card">
@@ -939,31 +959,31 @@
     </div>
     <div class="adv-cta-wrap">
 <!-- Trustpilot Carousel -->
-    <div class="tp2-widget" data-tpw="4">
-  <div class="tp2-head">
-    <a class="tp2-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg>
-      <span>Trustpilot</span>
+    <div class="tpic">
+  <div class="tpic-head">
+    <a class="tpic-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg><span>Trustpilot</span>
     </a>
-    <span class="tp2-score">
-      <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-      <span class="tp2-score-text"><strong>4.7</strong> Excellent &middot; <span class="tp2-count">861 reviews</span></span>
+    <span class="tpic-score">
+      <span class="tpic-tstars">★★★★★</span>
+      <strong>4.7</strong> Excellent &middot; <span>861 reviews</span>
     </span>
   </div>
-  <div class="tp2-track-wrap">
-    <div class="tp2-track">
-<div class="tp2-card">
-  <div class="tp2-card-inner">
-    <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-    <div class="tp2-title">Arrived quickly, works brilliantly</div>
-    <p class="tp2-text">Was hesitant about international shipping but my parcel arrived in under a week. Results on my arms after 3 weeks are remarkable — so much smoother.</p>
-    <div class="tp2-author">
-      <span class="tp2-avatar" style="background:#0891b2">MT</span>
-      <span>
-        <strong class="tp2-name">Margaret T.</strong>
-        <span class="tp2-meta"> · 21 Jul 2025</span>
-      </span>
+  <div class="tpic-slides">
+  <div class="tpic-slide tpic-on"><img src="images/reviews/review-1.png" alt="Michele, AU — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-2.png" alt="Vivian B, US — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-3.png" alt="Jacqueline Veazey, GB — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-4.png" alt="Brendilee Buhtz DeSoto, US — 4★ Trustpilot review" loading="lazy"></div>
+  </div>
+  <div class="tpic-nav">
+    <button class="tpic-btn tpic-prev" aria-label="Previous">&#8249;</button>
+    <div class="tpic-dots">
+  <button class="tpic-dot tpic-dot-on" aria-label="Review 1"></button>
+  <button class="tpic-dot" aria-label="Review 2"></button>
+  <button class="tpic-dot" aria-label="Review 3"></button>
+  <button class="tpic-dot" aria-label="Review 4"></button>
     </div>
+    <button class="tpic-btn tpic-next" aria-label="Next">&#8250;</button>
   </div>
 </div>
 <div class="tp2-card">
@@ -1051,31 +1071,31 @@
     <h2 class="adv-h2">What Verified Customers Are Saying</h2>
 
     <!-- Trustpilot Carousel (full reviews section) -->
-    <div class="tp2-widget" data-tpw="5">
-  <div class="tp2-head">
-    <a class="tp2-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg>
-      <span>Trustpilot</span>
+    <div class="tpic">
+  <div class="tpic-head">
+    <a class="tpic-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg><span>Trustpilot</span>
     </a>
-    <span class="tp2-score">
-      <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-      <span class="tp2-score-text"><strong>4.7</strong> Excellent &middot; <span class="tp2-count">861 reviews</span></span>
+    <span class="tpic-score">
+      <span class="tpic-tstars">★★★★★</span>
+      <strong>4.7</strong> Excellent &middot; <span>861 reviews</span>
     </span>
   </div>
-  <div class="tp2-track-wrap">
-    <div class="tp2-track">
-<div class="tp2-card">
-  <div class="tp2-card-inner">
-    <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-    <div class="tp2-title">Arrived quickly, works brilliantly</div>
-    <p class="tp2-text">Was hesitant about international shipping but my parcel arrived in under a week. Results on my arms after 3 weeks are remarkable — so much smoother.</p>
-    <div class="tp2-author">
-      <span class="tp2-avatar" style="background:#0891b2">MT</span>
-      <span>
-        <strong class="tp2-name">Margaret T.</strong>
-        <span class="tp2-meta"> · 21 Jul 2025</span>
-      </span>
+  <div class="tpic-slides">
+  <div class="tpic-slide tpic-on"><img src="images/reviews/review-1.png" alt="Michele, AU — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-2.png" alt="Vivian B, US — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-3.png" alt="Jacqueline Veazey, GB — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-4.png" alt="Brendilee Buhtz DeSoto, US — 4★ Trustpilot review" loading="lazy"></div>
+  </div>
+  <div class="tpic-nav">
+    <button class="tpic-btn tpic-prev" aria-label="Previous">&#8249;</button>
+    <div class="tpic-dots">
+  <button class="tpic-dot tpic-dot-on" aria-label="Review 1"></button>
+  <button class="tpic-dot" aria-label="Review 2"></button>
+  <button class="tpic-dot" aria-label="Review 3"></button>
+  <button class="tpic-dot" aria-label="Review 4"></button>
     </div>
+    <button class="tpic-btn tpic-next" aria-label="Next">&#8250;</button>
   </div>
 </div>
 <div class="tp2-card">
@@ -1234,31 +1254,31 @@
     </div>
     <div class="adv-cta-wrap">
 <!-- Trustpilot Carousel -->
-    <div class="tp2-widget" data-tpw="6">
-  <div class="tp2-head">
-    <a class="tp2-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg>
-      <span>Trustpilot</span>
+    <div class="tpic">
+  <div class="tpic-head">
+    <a class="tpic-brand" href="https://uk.trustpilot.com/review/sculpiflex.com" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.94 6.33L22 9.26l-5.5 5.29 1.3 7.45L12 18.27l-5.8 3.73 1.3-7.45L2 9.26l7.06-.93z"/></svg><span>Trustpilot</span>
     </a>
-    <span class="tp2-score">
-      <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-      <span class="tp2-score-text"><strong>4.7</strong> Excellent &middot; <span class="tp2-count">861 reviews</span></span>
+    <span class="tpic-score">
+      <span class="tpic-tstars">★★★★★</span>
+      <strong>4.7</strong> Excellent &middot; <span>861 reviews</span>
     </span>
   </div>
-  <div class="tp2-track-wrap">
-    <div class="tp2-track">
-<div class="tp2-card">
-  <div class="tp2-card-inner">
-    <span class="tp2-stars"><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span><span class="tp2-star" style="background:#00b67a">&#x2605;</span></span>
-    <div class="tp2-title">Arrived quickly, works brilliantly</div>
-    <p class="tp2-text">Was hesitant about international shipping but my parcel arrived in under a week. Results on my arms after 3 weeks are remarkable — so much smoother.</p>
-    <div class="tp2-author">
-      <span class="tp2-avatar" style="background:#0891b2">MT</span>
-      <span>
-        <strong class="tp2-name">Margaret T.</strong>
-        <span class="tp2-meta"> · 21 Jul 2025</span>
-      </span>
+  <div class="tpic-slides">
+  <div class="tpic-slide tpic-on"><img src="images/reviews/review-1.png" alt="Michele, AU — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-2.png" alt="Vivian B, US — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-3.png" alt="Jacqueline Veazey, GB — 5★ Trustpilot review" loading="lazy"></div>
+  <div class="tpic-slide"><img src="images/reviews/review-4.png" alt="Brendilee Buhtz DeSoto, US — 4★ Trustpilot review" loading="lazy"></div>
+  </div>
+  <div class="tpic-nav">
+    <button class="tpic-btn tpic-prev" aria-label="Previous">&#8249;</button>
+    <div class="tpic-dots">
+  <button class="tpic-dot tpic-dot-on" aria-label="Review 1"></button>
+  <button class="tpic-dot" aria-label="Review 2"></button>
+  <button class="tpic-dot" aria-label="Review 3"></button>
+  <button class="tpic-dot" aria-label="Review 4"></button>
     </div>
+    <button class="tpic-btn tpic-next" aria-label="Next">&#8250;</button>
   </div>
 </div>
 <div class="tp2-card">
@@ -1386,57 +1406,7 @@
 <div class="adv-sticky-spacer" aria-hidden="true"></div>
 
 
-<script>
 
-/* ── Trustpilot Carousel v2 JS ── */
-(function(){
-  var TOTAL=6, AUTO_MS=4400;
-  document.querySelectorAll('.tp2-widget').forEach(function(wrap){
-    var cards=wrap.querySelectorAll('.tp2-card');
-    var dotsWrap=wrap.querySelector('.tp2-dots');
-    var btnPrev=wrap.querySelector('.tp2-prev');
-    var btnNext=wrap.querySelector('.tp2-next');
-    if(!cards.length) return;
-    var idx=0, timer;
-
-    // Show first card
-    cards[0].classList.add('tp2-active');
-
-    // Build dots
-    for(var d=0;d<TOTAL;d++){
-      var dot=document.createElement('button');
-      dot.className='tp2-dot'+(d===0?' tp2-dot-active':'');
-      dot.setAttribute('aria-label','Review '+(d+1));
-      (function(i){dot.addEventListener('click',function(){go(i);reset();});})(d);
-      dotsWrap.appendChild(dot);
-    }
-
-    function go(n){
-      cards[idx].classList.remove('tp2-active');
-      wrap.querySelectorAll('.tp2-dot')[idx].classList.remove('tp2-dot-active');
-      idx=((n%TOTAL)+TOTAL)%TOTAL;
-      cards[idx].classList.add('tp2-active');
-      wrap.querySelectorAll('.tp2-dot')[idx].classList.add('tp2-dot-active');
-    }
-    function reset(){clearInterval(timer);timer=setInterval(function(){go(idx+1);},AUTO_MS);}
-
-    btnNext&&btnNext.addEventListener('click',function(){go(idx+1);reset();});
-    btnPrev&&btnPrev.addEventListener('click',function(){go(idx-1);reset();});
-
-    // Swipe
-    var sx=0;
-    wrap.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
-    wrap.addEventListener('touchend',function(e){
-      var dx=e.changedTouches[0].clientX-sx;
-      if(Math.abs(dx)>40){dx<0?go(idx+1):go(idx-1);reset();}
-    },{passive:true});
-
-    reset();
-  });
-})();
-/* ── end tp2 JS ── */
-
-</script>
 
 <script>
 (function(){
@@ -1453,5 +1423,34 @@
 })();
 </script>
 
+<script>
+/* ── TP Image Carousel JS ── */
+(function(){
+  var AUTO=4500;
+  document.querySelectorAll('.tpic').forEach(function(w){
+    var slides=w.querySelectorAll('.tpic-slide');
+    var dots=w.querySelectorAll('.tpic-dot');
+    var prev=w.querySelector('.tpic-prev');
+    var next=w.querySelector('.tpic-next');
+    var n=slides.length,idx=0,t;
+    function go(i){
+      slides[idx].classList.remove('tpic-on');
+      dots[idx].classList.remove('tpic-dot-on');
+      idx=((i%n)+n)%n;
+      slides[idx].classList.add('tpic-on');
+      dots[idx].classList.add('tpic-dot-on');
+    }
+    function reset(){clearInterval(t);t=setInterval(function(){go(idx+1);},AUTO);}
+    prev&&prev.addEventListener('click',function(){go(idx-1);reset();});
+    next&&next.addEventListener('click',function(){go(idx+1);reset();});
+    dots.forEach(function(d,i){d.addEventListener('click',function(){go(i);reset();});});
+    var sx=0;
+    w.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+    w.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40){dx<0?go(idx+1):go(idx-1);reset();}},{passive:true});
+    reset();
+  });
+})();
+/* ── end tpic JS ── */
+</script>
 </body>
 </html>
