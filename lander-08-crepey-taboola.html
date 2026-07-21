@@ -1390,45 +1390,45 @@
 
 /* ── Trustpilot Carousel v2 JS ── */
 (function(){
-  var TOTAL = 6, AUTO_MS = 4200;
+  var TOTAL=6, AUTO_MS=4400;
   document.querySelectorAll('.tp2-widget').forEach(function(wrap){
-    var track = wrap.querySelector('.tp2-track');
-    var dotsWrap = wrap.querySelector('.tp2-dots');
-    var btnPrev = wrap.querySelector('.tp2-prev');
-    var btnNext = wrap.querySelector('.tp2-next');
-    if(!track) return;
-    var idx = 0, timer;
+    var cards=wrap.querySelectorAll('.tp2-card');
+    var dotsWrap=wrap.querySelector('.tp2-dots');
+    var btnPrev=wrap.querySelector('.tp2-prev');
+    var btnNext=wrap.querySelector('.tp2-next');
+    if(!cards.length) return;
+    var idx=0, timer;
+
+    // Show first card
+    cards[0].classList.add('tp2-active');
 
     // Build dots
     for(var d=0;d<TOTAL;d++){
-      var dot = document.createElement('span');
-      dot.className = 'tp2-dot' + (d===0?' active':'');
-      (function(i){ dot.addEventListener('click', function(){ go(i); reset(); }); })(d);
+      var dot=document.createElement('button');
+      dot.className='tp2-dot'+(d===0?' tp2-dot-active':'');
+      dot.setAttribute('aria-label','Review '+(d+1));
+      (function(i){dot.addEventListener('click',function(){go(i);reset();});})(d);
       dotsWrap.appendChild(dot);
     }
 
     function go(n){
-      idx = ((n%TOTAL)+TOTAL)%TOTAL;
-      track.style.transform = 'translateX(-'+(idx*100)+'%)';
-      wrap.querySelectorAll('.tp2-dot').forEach(function(d,i){
-        d.classList.toggle('active', i===idx);
-      });
+      cards[idx].classList.remove('tp2-active');
+      wrap.querySelectorAll('.tp2-dot')[idx].classList.remove('tp2-dot-active');
+      idx=((n%TOTAL)+TOTAL)%TOTAL;
+      cards[idx].classList.add('tp2-active');
+      wrap.querySelectorAll('.tp2-dot')[idx].classList.add('tp2-dot-active');
     }
+    function reset(){clearInterval(timer);timer=setInterval(function(){go(idx+1);},AUTO_MS);}
 
-    function reset(){
-      clearInterval(timer);
-      timer = setInterval(function(){ go(idx+1); }, AUTO_MS);
-    }
-
-    btnNext && btnNext.addEventListener('click', function(){ go(idx+1); reset(); });
-    btnPrev && btnPrev.addEventListener('click', function(){ go(idx-1); reset(); });
+    btnNext&&btnNext.addEventListener('click',function(){go(idx+1);reset();});
+    btnPrev&&btnPrev.addEventListener('click',function(){go(idx-1);reset();});
 
     // Swipe
     var sx=0;
-    track.addEventListener('touchstart', function(e){ sx=e.touches[0].clientX; },{passive:true});
-    track.addEventListener('touchend', function(e){
+    wrap.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+    wrap.addEventListener('touchend',function(e){
       var dx=e.changedTouches[0].clientX-sx;
-      if(Math.abs(dx)>40){ dx<0?go(idx+1):go(idx-1); reset(); }
+      if(Math.abs(dx)>40){dx<0?go(idx+1):go(idx-1);reset();}
     },{passive:true});
 
     reset();
